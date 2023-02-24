@@ -9,7 +9,6 @@ const ContactList = ({ filterSearch, remove }) => {
 
   return <ul className={styles.list}>{list}</ul>;
 };
-// propTypes
 ContactList.propTypes = {
   filterSearch: PropTypes.array.isRequired,
   remove: PropTypes.func.isRequired,
