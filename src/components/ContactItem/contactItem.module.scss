@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  background-color: rgb(214, 212, 212);
+  &:nth-child(2n + 1) {
+    background-color: white;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  height: 25px;
+  border-radius: 5px;
+  border: solid;
+  &:hover,
+  &:focus {
+    background-color: red;
+  }
+}
+.name {
+  width: 150px;
+}
+.number {
+  width: 150px;
+}
