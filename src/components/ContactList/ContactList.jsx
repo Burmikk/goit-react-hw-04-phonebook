@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 
 const ContactList = ({ filterSearch, remove }) => {
   const list = filterSearch.map(({ id, name, number }) => (
-    <ContactItem key={id} name={name} number={number} removeItem={remove} />
+    <ContactItem
+      key={id}
+      id={id}
+      name={name}
+      number={number}
+      removeItem={remove}
+    />
   ));
 
   return <ul className={styles.list}>{list}</ul>;

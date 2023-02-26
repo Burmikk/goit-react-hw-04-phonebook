@@ -42,9 +42,9 @@ const ContactPage = () => {
     return newContact;
   };
 
-  const handleRemove = name => {
+  const handleRemove = id => {
     setContacts(prevState => {
-      const newState = prevState.filter(item => item.name !== name);
+      const newState = prevState.filter(item => item.id !== id);
       return newState;
     });
   };
