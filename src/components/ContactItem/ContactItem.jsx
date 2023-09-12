@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import styles from './contactItem.module.scss';
-const ContactItem = ({ id,name, number, removeItem }) => (
+const ContactItem = ({ id, name, number, removeItem }) => (
   <li className={styles.item}>
     <p className={styles.name}>{name}</p>
     <p className={styles.number}>{number}</p>

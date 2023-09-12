@@ -5,12 +5,17 @@ import { useState, useEffect } from 'react';
 import Filter from 'components/Filter/Filter';
 import styles from './contactPage.module.scss';
 
-const getFromLocalStorage = () => JSON.parse(localStorage.getItem('contacts'));
+const getFromLocalStorage = () => {
+  const value = JSON.parse(localStorage.getItem('contacts'));
+  if (value) {
+    return value;
+  } else return [];
+};
 
 const ContactPage = () => {
   const [contacts, setContacts] = useState(getFromLocalStorage());
+  console.log('contacts--->', contacts);
   const [filter, setFilter] = useState('');
-
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
